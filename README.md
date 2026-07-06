@@ -1,66 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Nexa.id - Web Portal Kerja Praktek
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Website Portal Nexa.id merupakan aplikasi web modern yang dibangun untuk menyajikan profil layanan, solusi industri, artikel berita, dan form langganan Nexa. Project ini dikembangkan menggunakan stack Laravel (sebagai backend) dan React + Inertia.js (sebagai frontend).
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Layanan Lengkap Nexa:** Informasi terperinci mengenai layanan Nexa (Nexatel, Nexa Data, Nexa Apps, Nexa Digital, Nexa Solutions).
+- **Solusi Industri Custom:** Halaman interaktif industri (Corporate, Education, Government, Hospitality, Manufacture) dengan layout *full background* resolusi tinggi.
+- **Berita & Artikel (Newsroom):** Halaman filter artikel dinamis, pencarian real-time, widget tag populer, dan tata letak *glassmorphism card* yang elegan.
+- **Formulir Kontak Terintegrasi:** Menghubungkan pengunjung langsung ke tim Nexa melalui mailer lokal dengan API `/contact-send`.
+- **Registrasi Langganan:** Formulir pemesanan paket terintegrasi langsung dengan pengiriman email otomatis ke admin (`nexaemailkp@gmail.com`).
+- **Dukungan Multi-Bahasa (ID/EN):** Mengintegrasikan Google Translate Client-side API secara seamless tanpa popup bawaan Google yang mengganggu.
+- **Floating Button WhatsApp:** Tombol obrolan langsung berwarna hijau WhatsApp asli yang terhubung ke Customer Care Nexa (`+628112971000`).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🛠️ Stack Teknologi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Backend:** [Laravel 10](https://laravel.com) (PHP)
+- **Frontend:** [React](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- **Routing & State:** [Inertia.js](https://inertiajs.com) (SPA tanpa reload)
+- **Styling:** CSS & TailwindCSS
+- **Build Tool:** [Vite](https://vitejs.dev)
+- **Komunikasi Data:** Axios API Calls
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 💻 Panduan Instalasi Lokal
 
-## Laravel Sponsors
+### Prasyarat
+Pastikan Anda sudah menginstal:
+* PHP >= 8.1
+* Composer
+* Node.js & NPM
+* Web Server (seperti Apache / Nginx) atau SQLite / MySQL jika diperlukan.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Langkah-Langkah
 
-### Premium Partners
+1. **Clone Repositori:**
+   ```bash
+   git clone https://github.com/thoriqhdap/Nexa.id-Kp.git
+   cd Nexa.id-Kp
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+2. **Instal Dependensi PHP (Composer):**
+   ```bash
+   composer install
+   ```
 
-## Contributing
+3. **Instal Dependensi JavaScript (NPM):**
+   ```bash
+   npm install
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. **Salin File Environment:**
+   ```bash
+   cp .env.example .env
+   ```
 
-## Code of Conduct
+5. **Generate Application Key:**
+   ```bash
+   php artisan key:generate
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. **Konfigurasi Mailer (Untuk Pengujian Form lokal):**
+   Pada file `.env`, atur driver mailer ke mode log agar email tersimpan di log Laravel lokal (`storage/logs/laravel.log`):
+   ```env
+   MAIL_MAILER=log
+   CONTACT_MAIL_RECEIVER=nexaemailkp@gmail.com
+   ```
 
-## Security Vulnerabilities
+7. **Jalankan Development Server:**
+   Buka dua terminal dan jalankan:
+   * **Terminal 1 (Laravel backend):**
+     ```bash
+     php artisan serve
+     ```
+   * **Terminal 2 (Frontend compilation):**
+     ```bash
+     npm run dev
+     ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+8. **Build Aset Produksi:**
+   ```bash
+   npm run build
+   ```
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📁 Struktur Folder Utama
+
+- `resources/js/Pages/` : Berisi halaman-halaman utama React (Solution, Services, Subscription, BeritaArtikel, dll).
+- `resources/js/Components/` : Komponen re-usable (Navbar, Footer, FloatingButtons, dll).
+- `routes/web.php` : Definisi rute Laravel dan integrasi pengiriman email form.
+- `public/images/` : Aset-aset gambar resolusi tinggi (HD) website.
