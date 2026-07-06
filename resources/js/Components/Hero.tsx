@@ -1,107 +1,50 @@
-import { ArrowRight, Wifi, Cloud, Bot, Cpu, Code, Database } from 'lucide-react'
-
 export default function Hero() {
-  const services = [
-    { icon: Wifi, text: 'Internet' },
-    { icon: Cloud, text: 'Cloud' },
-    { icon: Bot, text: 'AI' },
-    { icon: Cpu, text: 'IoT' },
-    { icon: Code, text: 'Software' },
-    { icon: Database, text: 'Data Center' },
-  ]
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0B1E3D] via-[#1B365D] to-[#0891B2]">
-        <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Ccircle cx=\'7\' cy=\'7\' r=\'1\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'}}
-        />
-      </div>
+    <section 
+      className="relative w-full py-16 lg:py-20 overflow-hidden bg-cover bg-[center_right] sm:bg-center mt-14 flex items-center min-h-[400px] lg:min-h-[500px]" 
+      style={{ backgroundImage: "url('/images/home-hero-bg.png')" }}
+    >
+      {/* Solid white cover on the left to ensure text readability */}
+      <div className="absolute inset-y-0 left-0 w-full md:w-[46%] bg-white z-0" />
+      {/* Rectangular gradient overlay fading to transparent on the right (Gradasi Persegi Panjang) */}
+      <div className="hidden md:block absolute inset-y-0 left-[46%] w-[18%] bg-gradient-to-r from-white to-transparent z-0" />
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      {/* Blue diagonal accent wave in the bottom-right corner (z-index adjusted to sit on background) */}
+      <div className="absolute bottom-0 right-0 w-[45%] h-[75%] bg-gradient-to-tr from-cyan-400 via-blue-500 to-[#1B365D] z-0 [clip-path:polygon(100%_0,100%_100%,0_100%)] hidden md:block opacity-90" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
-              <span className="text-white text-sm font-medium">Solusi Digital Terpercaya</span>
-            </div>
-
-            {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-orange-400">TRANSFORMASIKAN</span>
-              <br />
-              <span className="text-white">PERTUMBUHAN BISNIS</span>
-              <br />
-              <span className="text-white">ANDA BERSAMA <span className="text-cyan-400">NEXA!</span></span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Column: Text and CTA Buttons */}
+          <div className="lg:col-span-7 space-y-6 text-left max-w-xl lg:max-w-2xl pl-2 md:pl-6">
+            <h1 className="text-5xl sm:text-6xl md:text-7.5xl font-black font-heading tracking-tight leading-none">
+              <span className="text-orange-500 block">Next Level</span>
+              <span className="text-[#1E1B4B] block mt-2">Experience</span>
             </h1>
-
-            {/* Description */}
-            <p className="text-white/80 text-lg leading-relaxed max-w-lg">
-              Siap membantu memberikan solusi kebutuhan teknologi mulai dari Internet, Cloud Computing, Artificial Intelligence, Internet of Things (IoT), Software, Apps, layanan konsultasi IT, dsb.
+            <p className="text-lg sm:text-xl font-bold text-navy max-w-lg leading-relaxed font-sans">
+              Kami tidak hanya penyedia tetapi juga teman dalam semua masalah
             </p>
-
-            {/* Services Pills */}
-            <div className="flex flex-wrap gap-3">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all"
-                >
-                  <service.icon className="w-4 h-4 text-cyan-400" />
-                  <span className="text-white text-sm font-medium">{service.text}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#services"
-                className="inline-flex items-center justify-center bg-white/20 backdrop-blur-sm text-white border border-white/40 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-[#0B1E3D] transition-all group"
+            
+            {/* CTA Buttons */}
+            <div className="pt-4 flex flex-wrap gap-4">
+              <a 
+                href="#layanan" 
+                className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-sans font-bold rounded-2xl shadow-xl shadow-orange-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
               >
-                Let's Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Jelajahi Layanan
+              </a>
+              <a 
+                href="#contact" 
+                className="px-8 py-4 bg-navy hover:bg-[#1B365D] text-white font-sans font-bold rounded-2xl active:scale-[0.98] transition-all duration-300"
+              >
+                Hubungi Kami
               </a>
             </div>
           </div>
+          
+          {/* Empty spacer to show right background illustration */}
+          <div className="hidden md:block md:col-span-5" />
 
-          {/* Right Content - Stats Cards */}
-          <div className="hidden lg:grid grid-cols-2 gap-6">
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <p className="text-white/80 text-sm">Uptime Guarantee</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all mt-8">
-                <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
-                <p className="text-white/80 text-sm">Customer Support</p>
-              </div>
-            </div>
-            <div className="space-y-6 mt-12">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-                <div className="text-4xl font-bold text-white mb-2">100+</div>
-                <p className="text-white/80 text-sm">Kota Coverage</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">10+</div>
-                <p className="text-white/80 text-sm">Tahun Pengalaman</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-3 bg-white/50 rounded-full animate-pulse" />
         </div>
       </div>
     </section>

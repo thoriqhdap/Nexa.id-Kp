@@ -1,103 +1,104 @@
-import { Phone, Mail, MapPin, Shield, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import * as React from 'react'
+
+const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+)
+
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+)
+
+const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+)
 
 export default function Footer() {
-  const cities = ['Yogyakarta', 'Jakarta', 'Semarang', 'Solo', 'Tegal', 'Bandung', 'Surabaya', 'Malang']
+  const cities = [
+    'JAKARTA',
+    'SEMARANG',
+    'YOGYAKARTA',
+    'SOLO',
+    'SALATIGA',
+    'MAGELANG',
+    'PURWOKERTO',
+    'SURABAYA',
+    'BALI',
+    'MATARAM'
+  ]
 
   return (
-    <footer className="bg-[#0B1E3D] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Column 1 */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-[#0B1E3D] text-2xl font-bold">N</span>
-              </div>
-              <span className="text-2xl font-bold">NEXA</span>
-            </div>
-            <p className="text-white/70 text-sm leading-relaxed">
-              PT Media Sarana Data (Nexa) - Solusi digital terpercaya untuk bisnis Anda di Indonesia.
-            </p>
-            <div className="flex items-center space-x-3 bg-white/10 p-3 rounded-lg">
-              <Shield className="w-8 h-8 text-cyan-400" />
-              <div>
-                <p className="text-xs text-white/50">Sertifikasi</p>
-                <p className="text-sm font-semibold">ISO 27001:2013</p>
-              </div>
-            </div>
-            <div className="flex space-x-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-cyan-400 transition-colors">
-                  <Icon className="w-5 h-5" />
-                </a>
+    <footer id="contact" className="bg-[#F8F9FA] text-gray-800 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        {/* Main Content Row */}
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 pb-10">
+          
+          {/* Left Side: Cities Bulleted List */}
+          <div className="max-w-3xl">
+            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs sm:text-sm font-bold font-heading text-gray-600 uppercase tracking-wide">
+              {cities.map((city, index) => (
+                <div key={city} className="flex items-center">
+                  <span>{city}</span>
+                  {index < cities.length - 1 && (
+                    <span className="ml-2.5 text-gray-400 font-normal select-none">•</span>
+                  )}
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Column 2: Kontak */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Kontak</h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400 mt-1" />
-                <div>
-                  <p className="text-white/90">+62 274 123 456</p>
-                  <p className="text-white/50 text-sm">WhatsApp Available</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-cyan-400 mt-1" />
-                <div>
-                  <p className="text-white/90">info@nexa.id</p>
-                  <p className="text-white/50 text-sm">sales@nexa.id</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-cyan-400 mt-1" />
-                <div>
-                  <p className="text-white/90">Yogyakarta, Indonesia</p>
-                  <p className="text-white/50 text-sm">Kantor Pusat</p>
-                </div>
-              </div>
+          {/* Right Side: Social Media Channels */}
+          <div className="flex flex-col items-start lg:items-end gap-3 flex-shrink-0">
+            <span className="text-sm font-semibold text-gray-400">Temukan kami di</span>
+            
+            {/* Social Icons (Black/Navy rounded blocks matching mockup) */}
+            <div className="flex items-center gap-3">
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-black text-white hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors shadow-sm"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon className="w-5 h-5" />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-black text-white hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors shadow-sm"
+                aria-label="Instagram"
+              >
+                <InstagramIcon className="w-5 h-5" />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-black text-white hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors shadow-sm"
+                aria-label="Facebook"
+              >
+                <FacebookIcon className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
-          {/* Column 3: Link */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Link Informasi</h3>
-            <ul className="space-y-3">
-              {['Tentang Nexa', 'Layanan', 'Karir', 'Blog', 'FAQ', 'Kebijakan Privasi', 'Syarat & Ketentuan'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-white/70 hover:text-cyan-400 transition-colors text-sm">{link}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 4: Coverage */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Area Coverage</h3>
-            <div className="flex flex-wrap gap-2">
-              {cities.map((city) => (
-                <span key={city} className="px-3 py-1 bg-white/10 rounded-full text-sm text-white/70 hover:bg-white/20 transition-colors">
-                  {city}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
-      </div>
 
-      <div className="bg-[#061425] py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/50">
-            <p>© 2026 PT Media Sarana Data (Nexa). All rights reserved.</p>
-            <div className="flex space-x-6 mt-2 md:mt-0">
-              <a href="#" className="hover:text-cyan-400 transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</a>
-            </div>
-          </div>
+        {/* Divider */}
+        <div className="border-t border-gray-200" />
+
+        {/* Bottom Row: Copyright Statement */}
+        <div className="pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+          <p className="text-xs sm:text-sm text-gray-400 font-medium">
+            @ Copyright 2026 PT Internet Mulia Untuk Negeri. All Rights Reserved.
+          </p>
         </div>
+
       </div>
     </footer>
   )

@@ -15,8 +15,38 @@
         @viteReactRefresh
         @vite(['resources/js/app.tsx', "resources/js/Pages/{$page['component']}.tsx"])
         @inertiaHead
+        
+        <!-- Google Translate Widget -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'id',
+                    includedLanguages: 'id,en',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+        <style>
+            /* Hide the default Google Translate top bar and elements */
+            iframe.VIpgJd-yDtrds-L1X3M-wN1158-bN97Pc,
+            iframe.skiptranslate,
+            .goog-te-banner-frame,
+            #goog-gt-tt,
+            .goog-te-spinner-pos {
+                display: none !important;
+                visibility: hidden !important;
+            }
+            body {
+                top: 0px !important;
+            }
+            /* Only hide google translate elements that are not inside our navbar layout */
+        </style>
     </head>
     <body class="font-sans antialiased">
+        <div id="google_translate_element" style="display: none;"></div>
         @inertia
     </body>
 </html>

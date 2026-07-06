@@ -1,65 +1,94 @@
-import { Globe, Rocket, Cloud, Network, Settings, Code } from 'lucide-react'
+import { Link } from '@inertiajs/react'
+import { ArrowRight } from 'lucide-react'
 
 export default function ServicesSection() {
   const services = [
     {
-      icon: Globe,
-      title: 'Internet For Business',
-      description: 'Koneksi internet dedicated berkecepatan tinggi untuk kebutuhan bisnis Anda.',
+      logoText: 'tel',
+      textColor: 'text-orange-500',
+      description: 'Internet untuk bisnis & seluruh kebutuhan Anda.',
+      href: '/nexatel'
     },
     {
-      icon: Rocket,
-      title: 'Internet For Home',
-      description: 'Layanan internet rumahan dengan kecepatan dan stabilitas terbaik.',
+      logoText: 'apps',
+      textColor: 'text-red-600',
+      description: 'Selaraskan tujuan Anda bersama kami! Situs Web, Aplikasi Web, Aplikasi Seluler, dan Agensi Pengembangan.',
+      href: '/nexa-apps'
     },
     {
-      icon: Settings,
-      title: 'Manage Service & IT Consultant',
-      description: 'Layanan manajemen IT profesional dan konsultasi teknologi terpercaya.',
+      logoText: 'data',
+      textColor: 'text-blue-600',
+      description: 'Membuat masa depan perusahaan Anda siap dengan layanan DCaaS dan data center.',
+      href: '/nexa-data'
     },
     {
-      icon: Code,
-      title: 'Application Development',
-      description: 'Pengembangan aplikasi custom sesuai kebutuhan bisnis Anda.',
+      logoText: 'digital',
+      textColor: 'text-pink-600',
+      description: 'Manajemen Media Sosial, Perencanaan Media, Whatsapp, Mesin Siaran Email & SMS, Identitas Merek, Desain Grafis.',
+      href: '/nexa-digital'
     },
     {
-      icon: Network,
-      title: 'System Integration',
-      description: 'Integrasi sistem yang seamless untuk efisiensi operasional bisnis.',
-    },
+      logoText: 'solutions',
+      textColor: 'text-blue-600',
+      description: 'Layanan terkelola dengan perkembangan terbaru & solusi hemat biaya.',
+      href: '/nexa-solutions'
+    }
   ]
 
   return (
-    <section id="layanan" className="py-20 bg-gradient-to-br from-[#0B1E3D] via-[#1565C0] to-[#1B365D] relative overflow-hidden">
-      {/* Decorative circles */}
-      <div className="absolute right-0 top-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute left-0 bottom-0 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+    <section id="layanan" className="py-24 bg-gradient-to-b from-[#0B1E3D] via-[#1E3A8A] to-white relative overflow-hidden">
+      {/* Curved background elements */}
+      <div className="absolute right-0 top-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10" />
+      <div className="absolute left-0 bottom-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -z-10" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-4 gap-8 items-start">
-          {/* Left Text */}
-          <div className="lg:col-span-1 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-orange-400 leading-tight">
-              Layanan Kami
-            </h2>
-            <p className="text-white/70 leading-relaxed text-sm">
-              NEXA menyediakan berbagai macam layanan terbaik yang disesuaikan kebutuhan dengan fitur lengkap untuk meningkatkan efisiensi operasional bisnis Anda.
-            </p>
-          </div>
-
-          {/* Services Grid */}
-          <div className="lg:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Card Container */}
+        <div className="bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 lg:p-16 border border-gray-100 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+            
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/15 hover:border-white/30 transition-all duration-300 group cursor-pointer"
-              >
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-cyan-400/20 transition-colors">
-                  <service.icon className="w-8 h-8 text-white group-hover:text-cyan-400 transition-colors" strokeWidth={1.5} />
+              <div key={index} className="flex flex-col items-center text-center space-y-5 group">
+                {/* Logo Combination */}
+                <div className="flex flex-col items-center">
+                  <img 
+                    src="/images/logo.png" 
+                    alt="Nexa Logo" 
+                    className="h-10 w-auto object-contain"
+                  />
+                  <span className={`text-sm font-black uppercase tracking-wider -mt-1 ${service.textColor}`}>
+                    {service.logoText}
+                  </span>
                 </div>
-                <h3 className="text-white font-semibold text-sm leading-tight">{service.title}</h3>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed max-w-xs font-sans font-medium h-12 flex items-center justify-center">
+                  {service.description}
+                </p>
+
+                {/* Learn More Link */}
+                <Link 
+                  href={service.href}
+                  className="inline-flex items-center gap-2 text-sm font-bold text-gray-800 hover:text-cyan-600 transition-colors group-hover:translate-x-1 duration-300"
+                >
+                  <ArrowRight className="w-4 h-4 text-gray-900 group-hover:text-cyan-600 transition-colors" />
+                  <span>Learn More</span>
+                </Link>
               </div>
             ))}
+
+            {/* Accent callout text in the empty grid cell */}
+            <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-1 py-4">
+              <p className="text-2xl lg:text-3xl font-black text-orange-500 tracking-tight leading-none">
+                Koneksi yang
+              </p>
+              <p className="text-2xl lg:text-3xl font-black text-orange-500 tracking-tight leading-none">
+                melampaui
+              </p>
+              <p className="text-2xl lg:text-3xl font-black text-navy tracking-tight leading-none">
+                segalanya.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
