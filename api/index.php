@@ -1,17 +1,5 @@
 <?php
 
-if (isset($_GET['diag'])) {
-    header('Content-Type: text/plain');
-    echo "Base Path: " . realpath(__DIR__ . '/..') . "\n";
-    echo "Files in base path:\n";
-    print_r(glob(realpath(__DIR__ . '/..') . '/*'));
-    echo "\nFiles in public path:\n";
-    print_r(glob(realpath(__DIR__ . '/../public') . '/*'));
-    echo "\nFiles in public/build path:\n";
-    print_r(glob(realpath(__DIR__ . '/../public/build') . '/*'));
-    exit;
-}
-
 // Set environment variables for Vercel serverless compatibility programmatically
 if (isset($_ENV['VERCEL']) || isset($_SERVER['VERCEL']) || isset($_ENV['NOW_PORT'])) {
     $_ENV['APP_CONFIG_CACHE'] = '/tmp/config.php';
@@ -44,6 +32,7 @@ if (isset($_ENV['VERCEL']) || isset($_ENV['NOW_PORT'])) {
         $storagePath . '/framework/sessions',
         $storagePath . '/framework/views',
         $storagePath . '/framework/cache',
+        '/tmp/public/build',
     ];
     foreach ($storageDirs as $dir) {
         if (!is_dir($dir)) {
@@ -51,6 +40,16 @@ if (isset($_ENV['VERCEL']) || isset($_ENV['NOW_PORT'])) {
         }
     }
     $app->useStoragePath($storagePath);
+
+    // Salin manifest.json dari resources ke /tmp/public/build/manifest.json agar bisa dibaca Laravel
+    $bundledManifest = __DIR__ . '/../resources/manifest.json';
+    $targetManifest = '/tmp/public/build/manifest.json';
+    if (file_exists($bundledManifest)) {
+        copy($bundledManifest, $targetManifest);
+    }
+
+    // Paksa Laravel menggunakan /tmp/public sebagai public path di serverless
+    $app->usePublicPath('/tmp/public');
 }
 
 // Jalankan Kernel HTTP Laravel

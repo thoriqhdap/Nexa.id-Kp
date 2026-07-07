@@ -1,0 +1,554 @@
+{
+  "_ApplicationLogo-7d376a38.js": {
+    "file": "assets/ApplicationLogo-7d376a38.js",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_AuthenticatedLayout-e91527c8.js": {
+    "file": "assets/AuthenticatedLayout-e91527c8.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_ApplicationLogo-7d376a38.js",
+      "_transition-85affc53.js"
+    ]
+  },
+  "_FloatingButtons-e6f8c21b.js": {
+    "file": "assets/FloatingButtons-e6f8c21b.js",
+    "imports": [
+      "_Footer-4e6ac15c.js",
+      "resources/js/app.tsx",
+      "_message-circle-1dda78c7.js"
+    ]
+  },
+  "_Footer-4e6ac15c.js": {
+    "file": "assets/Footer-4e6ac15c.js",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_GuestLayout-25d79a7b.js": {
+    "file": "assets/GuestLayout-25d79a7b.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_ApplicationLogo-7d376a38.js"
+    ]
+  },
+  "_InputLabel-af969219.js": {
+    "file": "assets/InputLabel-af969219.js",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_PrimaryButton-fe24dbed.js": {
+    "file": "assets/PrimaryButton-fe24dbed.js",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_TextInput-22c14932.js": {
+    "file": "assets/TextInput-22c14932.js",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_chevron-right-c809df70.js": {
+    "file": "assets/chevron-right-c809df70.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_cpu-22afef0b.js": {
+    "file": "assets/cpu-22afef0b.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_credit-card-7c0e358d.js": {
+    "file": "assets/credit-card-7c0e358d.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_globe-a3ef9e1c.js": {
+    "file": "assets/globe-a3ef9e1c.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_hard-drive-af3ce8e3.js": {
+    "file": "assets/hard-drive-af3ce8e3.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_map-pin-e6c42ba6.js": {
+    "file": "assets/map-pin-e6c42ba6.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_message-circle-1dda78c7.js": {
+    "file": "assets/message-circle-1dda78c7.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_network-c4f94c9e.js": {
+    "file": "assets/network-c4f94c9e.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_phone-5964824d.js": {
+    "file": "assets/phone-5964824d.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_send-0ab37fbd.js": {
+    "file": "assets/send-0ab37fbd.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_server-491d8ce3.js": {
+    "file": "assets/server-491d8ce3.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_settings-14a1497b.js": {
+    "file": "assets/settings-14a1497b.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_shield-check-87608a6e.js": {
+    "file": "assets/shield-check-87608a6e.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_smartphone-0307ccc0.js": {
+    "file": "assets/smartphone-0307ccc0.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_transition-85affc53.js": {
+    "file": "assets/transition-85affc53.js",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_tv-d693ba95.js": {
+    "file": "assets/tv-d693ba95.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_users-9eccb945.js": {
+    "file": "assets/users-9eccb945.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_wifi-f52d9d01.js": {
+    "file": "assets/wifi-f52d9d01.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_wrench-0dbaffdf.js": {
+    "file": "assets/wrench-0dbaffdf.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "_zap-70fb7cc2.js": {
+    "file": "assets/zap-70fb7cc2.js",
+    "imports": [
+      "_Footer-4e6ac15c.js"
+    ]
+  },
+  "resources/js/Pages/Areas.tsx": {
+    "file": "assets/Areas-63aabc24.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_map-pin-e6c42ba6.js",
+      "_phone-5964824d.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Areas.tsx"
+  },
+  "resources/js/Pages/Auth/ConfirmPassword.tsx": {
+    "file": "assets/ConfirmPassword-5df0dfb4.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_GuestLayout-25d79a7b.js",
+      "_TextInput-22c14932.js",
+      "_InputLabel-af969219.js",
+      "_PrimaryButton-fe24dbed.js",
+      "_ApplicationLogo-7d376a38.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/ConfirmPassword.tsx"
+  },
+  "resources/js/Pages/Auth/ForgotPassword.tsx": {
+    "file": "assets/ForgotPassword-fbb7fa1f.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_GuestLayout-25d79a7b.js",
+      "_TextInput-22c14932.js",
+      "_PrimaryButton-fe24dbed.js",
+      "_ApplicationLogo-7d376a38.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/ForgotPassword.tsx"
+  },
+  "resources/js/Pages/Auth/Login.tsx": {
+    "file": "assets/Login-065adb03.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_GuestLayout-25d79a7b.js",
+      "_TextInput-22c14932.js",
+      "_InputLabel-af969219.js",
+      "_PrimaryButton-fe24dbed.js",
+      "_ApplicationLogo-7d376a38.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/Login.tsx"
+  },
+  "resources/js/Pages/Auth/Register.tsx": {
+    "file": "assets/Register-0e7b923c.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_GuestLayout-25d79a7b.js",
+      "_TextInput-22c14932.js",
+      "_InputLabel-af969219.js",
+      "_PrimaryButton-fe24dbed.js",
+      "_ApplicationLogo-7d376a38.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/Register.tsx"
+  },
+  "resources/js/Pages/Auth/ResetPassword.tsx": {
+    "file": "assets/ResetPassword-3c9f3a85.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_GuestLayout-25d79a7b.js",
+      "_TextInput-22c14932.js",
+      "_InputLabel-af969219.js",
+      "_PrimaryButton-fe24dbed.js",
+      "_ApplicationLogo-7d376a38.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/ResetPassword.tsx"
+  },
+  "resources/js/Pages/Auth/VerifyEmail.tsx": {
+    "file": "assets/VerifyEmail-486b6328.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_GuestLayout-25d79a7b.js",
+      "_PrimaryButton-fe24dbed.js",
+      "_ApplicationLogo-7d376a38.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/VerifyEmail.tsx"
+  },
+  "resources/js/Pages/BeritaArtikel.tsx": {
+    "file": "assets/BeritaArtikel-9fbc0543.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_FloatingButtons-e6f8c21b.js",
+      "_message-circle-1dda78c7.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/BeritaArtikel.tsx"
+  },
+  "resources/js/Pages/Dashboard.tsx": {
+    "file": "assets/Dashboard-0ea04c16.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_AuthenticatedLayout-e91527c8.js",
+      "_ApplicationLogo-7d376a38.js",
+      "_transition-85affc53.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Dashboard.tsx"
+  },
+  "resources/js/Pages/NexaApps.tsx": {
+    "file": "assets/NexaApps-d8acf90b.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_message-circle-1dda78c7.js",
+      "_cpu-22afef0b.js",
+      "_chevron-right-c809df70.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/NexaApps.tsx"
+  },
+  "resources/js/Pages/NexaData.tsx": {
+    "file": "assets/NexaData-06357794.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_server-491d8ce3.js",
+      "_chevron-right-c809df70.js",
+      "_message-circle-1dda78c7.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/NexaData.tsx"
+  },
+  "resources/js/Pages/NexaDigital.tsx": {
+    "file": "assets/NexaDigital-5bb9d1ad.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_chevron-right-c809df70.js",
+      "_message-circle-1dda78c7.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/NexaDigital.tsx"
+  },
+  "resources/js/Pages/NexaSolutions.tsx": {
+    "file": "assets/NexaSolutions-89bdbdd8.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_wrench-0dbaffdf.js",
+      "_network-c4f94c9e.js",
+      "_users-9eccb945.js",
+      "_chevron-right-c809df70.js",
+      "_message-circle-1dda78c7.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/NexaSolutions.tsx"
+  },
+  "resources/js/Pages/Nexatel.tsx": {
+    "file": "assets/Nexatel-20df3b2c.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_zap-70fb7cc2.js",
+      "_shield-check-87608a6e.js",
+      "_chevron-right-c809df70.js",
+      "_message-circle-1dda78c7.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Nexatel.tsx"
+  },
+  "resources/js/Pages/PrivacyPolicy.tsx": {
+    "file": "assets/PrivacyPolicy-c060cade.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/PrivacyPolicy.tsx"
+  },
+  "resources/js/Pages/Profile/Edit.tsx": {
+    "file": "assets/Edit-c0ee4785.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_AuthenticatedLayout-e91527c8.js",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.tsx",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.tsx",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.tsx",
+      "_ApplicationLogo-7d376a38.js",
+      "_transition-85affc53.js",
+      "_TextInput-22c14932.js",
+      "_InputLabel-af969219.js",
+      "_PrimaryButton-fe24dbed.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Edit.tsx"
+  },
+  "resources/js/Pages/Profile/Partials/DeleteUserForm.tsx": {
+    "file": "assets/DeleteUserForm-9c754989.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_TextInput-22c14932.js",
+      "_InputLabel-af969219.js",
+      "_transition-85affc53.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.tsx"
+  },
+  "resources/js/Pages/Profile/Partials/UpdatePasswordForm.tsx": {
+    "file": "assets/UpdatePasswordForm-75d6b12d.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_TextInput-22c14932.js",
+      "_InputLabel-af969219.js",
+      "_PrimaryButton-fe24dbed.js",
+      "_transition-85affc53.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.tsx"
+  },
+  "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.tsx": {
+    "file": "assets/UpdateProfileInformationForm-8b843b89.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_TextInput-22c14932.js",
+      "_InputLabel-af969219.js",
+      "_PrimaryButton-fe24dbed.js",
+      "_transition-85affc53.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.tsx"
+  },
+  "resources/js/Pages/SolutionCorporate.tsx": {
+    "file": "assets/SolutionCorporate-ccb65efd.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_chevron-right-c809df70.js",
+      "_message-circle-1dda78c7.js",
+      "_wifi-f52d9d01.js",
+      "_network-c4f94c9e.js",
+      "_smartphone-0307ccc0.js",
+      "_credit-card-7c0e358d.js",
+      "_users-9eccb945.js",
+      "_server-491d8ce3.js",
+      "_hard-drive-af3ce8e3.js",
+      "_tv-d693ba95.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/SolutionCorporate.tsx"
+  },
+  "resources/js/Pages/SolutionEducation.tsx": {
+    "file": "assets/SolutionEducation-04a29c51.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_chevron-right-c809df70.js",
+      "_message-circle-1dda78c7.js",
+      "_wifi-f52d9d01.js",
+      "_credit-card-7c0e358d.js",
+      "_users-9eccb945.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/SolutionEducation.tsx"
+  },
+  "resources/js/Pages/SolutionGovernment.tsx": {
+    "file": "assets/SolutionGovernment-538b516f.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_chevron-right-c809df70.js",
+      "_message-circle-1dda78c7.js",
+      "_wifi-f52d9d01.js",
+      "_globe-a3ef9e1c.js",
+      "_server-491d8ce3.js",
+      "_shield-check-87608a6e.js",
+      "_smartphone-0307ccc0.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/SolutionGovernment.tsx"
+  },
+  "resources/js/Pages/SolutionHospitality.tsx": {
+    "file": "assets/SolutionHospitality-eb6a69bd.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_chevron-right-c809df70.js",
+      "_message-circle-1dda78c7.js",
+      "_tv-d693ba95.js",
+      "_settings-14a1497b.js",
+      "_wifi-f52d9d01.js",
+      "_cpu-22afef0b.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/SolutionHospitality.tsx"
+  },
+  "resources/js/Pages/SolutionManufacture.tsx": {
+    "file": "assets/SolutionManufacture-c9f9c07a.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_chevron-right-c809df70.js",
+      "_message-circle-1dda78c7.js",
+      "_cpu-22afef0b.js",
+      "_settings-14a1497b.js",
+      "_map-pin-e6c42ba6.js",
+      "_wrench-0dbaffdf.js",
+      "_hard-drive-af3ce8e3.js",
+      "_wifi-f52d9d01.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/SolutionManufacture.tsx"
+  },
+  "resources/js/Pages/Subscription.tsx": {
+    "file": "assets/Subscription-d1fef529.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_send-0ab37fbd.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Subscription.tsx"
+  },
+  "resources/js/Pages/Welcome.tsx": {
+    "file": "assets/Welcome-2460e2b0.js",
+    "imports": [
+      "resources/js/app.tsx",
+      "_Footer-4e6ac15c.js",
+      "_FloatingButtons-e6f8c21b.js",
+      "_globe-a3ef9e1c.js",
+      "_users-9eccb945.js",
+      "_zap-70fb7cc2.js",
+      "_phone-5964824d.js",
+      "_map-pin-e6c42ba6.js",
+      "_send-0ab37fbd.js",
+      "_message-circle-1dda78c7.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Welcome.tsx"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-692861b7.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.tsx": {
+    "css": [
+      "assets/app-692861b7.css"
+    ],
+    "dynamicImports": [
+      "resources/js/Pages/Areas.tsx",
+      "resources/js/Pages/Auth/ConfirmPassword.tsx",
+      "resources/js/Pages/Auth/ForgotPassword.tsx",
+      "resources/js/Pages/Auth/Login.tsx",
+      "resources/js/Pages/Auth/Register.tsx",
+      "resources/js/Pages/Auth/ResetPassword.tsx",
+      "resources/js/Pages/Auth/VerifyEmail.tsx",
+      "resources/js/Pages/BeritaArtikel.tsx",
+      "resources/js/Pages/Dashboard.tsx",
+      "resources/js/Pages/NexaApps.tsx",
+      "resources/js/Pages/NexaData.tsx",
+      "resources/js/Pages/NexaDigital.tsx",
+      "resources/js/Pages/NexaSolutions.tsx",
+      "resources/js/Pages/Nexatel.tsx",
+      "resources/js/Pages/PrivacyPolicy.tsx",
+      "resources/js/Pages/Profile/Edit.tsx",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.tsx",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.tsx",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.tsx",
+      "resources/js/Pages/SolutionCorporate.tsx",
+      "resources/js/Pages/SolutionEducation.tsx",
+      "resources/js/Pages/SolutionGovernment.tsx",
+      "resources/js/Pages/SolutionHospitality.tsx",
+      "resources/js/Pages/SolutionManufacture.tsx",
+      "resources/js/Pages/Subscription.tsx",
+      "resources/js/Pages/Welcome.tsx"
+    ],
+    "file": "assets/app-255f1ab7.js",
+    "isEntry": true,
+    "src": "resources/js/app.tsx"
+  }
+}
