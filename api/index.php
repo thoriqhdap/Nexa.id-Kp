@@ -1,5 +1,18 @@
 <?php
 
+// Set environment variables for Vercel serverless compatibility programmatically
+if (isset($_ENV['VERCEL']) || isset($_SERVER['VERCEL']) || isset($_ENV['NOW_PORT'])) {
+    $_ENV['APP_CONFIG_CACHE'] = '/tmp/config.php';
+    $_ENV['APP_EVENTS_CACHE'] = '/tmp/events.php';
+    $_ENV['APP_PACKAGES_CACHE'] = '/tmp/packages.php';
+    $_ENV['APP_ROUTES_CACHE'] = '/tmp/routes.php';
+    $_ENV['APP_SERVICES_CACHE'] = '/tmp/services.php';
+    $_ENV['VIEW_COMPILED_PATH'] = '/tmp/views';
+    $_ENV['CACHE_DRIVER'] = 'array';
+    $_ENV['SESSION_DRIVER'] = 'cookie';
+    $_ENV['LOG_CHANNEL'] = 'stderr';
+}
+
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
