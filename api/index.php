@@ -1,5 +1,17 @@
 <?php
 
+if (isset($_GET['diag'])) {
+    header('Content-Type: text/plain');
+    echo "Base Path: " . realpath(__DIR__ . '/..') . "\n";
+    echo "Files in base path:\n";
+    print_r(glob(realpath(__DIR__ . '/..') . '/*'));
+    echo "\nFiles in public path:\n";
+    print_r(glob(realpath(__DIR__ . '/../public') . '/*'));
+    echo "\nFiles in public/build path:\n";
+    print_r(glob(realpath(__DIR__ . '/../public/build') . '/*'));
+    exit;
+}
+
 // Set environment variables for Vercel serverless compatibility programmatically
 if (isset($_ENV['VERCEL']) || isset($_SERVER['VERCEL']) || isset($_ENV['NOW_PORT'])) {
     $_ENV['APP_CONFIG_CACHE'] = '/tmp/config.php';
