@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "npm run build",
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "true",
