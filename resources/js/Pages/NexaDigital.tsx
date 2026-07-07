@@ -73,6 +73,10 @@ export default function NexaDigital() {
                 <div className="pt-4 flex flex-wrap gap-4">
                   <a 
                     href="#solutions" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                     className="px-8 py-4 bg-pink-600 hover:bg-pink-700 text-white font-sans font-bold rounded-2xl shadow-xl shadow-pink-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                   >
                     Pelajari Layanan

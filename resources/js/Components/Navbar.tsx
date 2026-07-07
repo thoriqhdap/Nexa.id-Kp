@@ -50,6 +50,21 @@ export default function Navbar() {
     window.location.reload();
   }
 
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement | HTMLDivElement>, href: string) => {
+    if (href.startsWith('/#') || href.startsWith('#')) {
+      const targetId = href.replace('/#', '').replace('#', '');
+      const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/';
+      
+      if (isHomePage) {
+        e.preventDefault();
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40)
@@ -109,13 +124,13 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-14">
             {/* Left: Logo & Brand */}
             <div className="flex items-center">
-              <a href="#" className="flex items-center group">
+              <Link href="/" className="flex items-center group">
                 <img 
                   src="/images/logo.png" 
                   alt="NEXA Logo" 
                   className="h-9 md:h-10 w-auto object-contain transition-transform group-hover:scale-105" 
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Right Side: Header Actions */}
@@ -239,6 +254,7 @@ export default function Navbar() {
                             <a
                               key={link.label}
                               href={link.href}
+                              onClick={(e) => handleAnchorClick(e, link.href)}
                               className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors font-medium"
                             >
                               {link.label}
@@ -266,6 +282,7 @@ export default function Navbar() {
                   <a
                     key={item.label}
                     href={item.href}
+                    onClick={(e) => handleAnchorClick(e, item.href || '')}
                     className="font-semibold text-sm text-gray-700 hover:text-cyan-600 transition-colors py-3"
                   >
                     {item.label}
@@ -311,7 +328,10 @@ export default function Navbar() {
                           <a
                             key={link.label}
                             href={link.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
+                            onClick={(e) => {
+                              setIsMobileMenuOpen(false)
+                              handleAnchorClick(e, link.href)
+                            }}
                             className="block py-1.5 text-sm text-gray-600 hover:text-cyan-600 font-medium"
                           >
                             {link.label}
@@ -338,7 +358,10 @@ export default function Navbar() {
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false)
+                    handleAnchorClick(e, item.href || '')
+                  }}
                   className="block py-2 text-base font-semibold text-gray-700 border-b border-gray-50"
                 >
                   {item.label}
@@ -375,7 +398,10 @@ export default function Navbar() {
               </div>
               <a
                 href="/#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setIsMobileMenuOpen(false)
+                  handleAnchorClick(e, '/#contact')
+                }}
                 className="w-full text-center py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-400 via-blue-500 to-navy shadow-md shadow-blue-500/10"
               >
                 Hubungi Kami

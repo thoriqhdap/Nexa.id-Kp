@@ -112,6 +112,10 @@ export default function SolutionEducation() {
                 <div className="pt-4">
                   <a
                     href="#products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                     className="inline-flex items-center gap-2 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-sans font-bold rounded-2xl shadow-xl shadow-orange-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                   >
                     Lihat Produk Kami

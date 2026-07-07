@@ -4,7 +4,7 @@ export default function BrandSection() {
   return (
     <>
       {/* 1. Our Valued Customers Section */}
-      <section className="bg-gray-50 py-20 border-b border-gray-200">
+      <section id="clients" className="bg-gray-50 py-20 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 mb-12">
           <h2 className="text-4xl md:text-5xl font-black font-heading text-navy">
             Our Valued Customers

@@ -29,12 +29,20 @@ export default function Hero() {
             <div className="pt-4 flex flex-wrap gap-4">
               <a 
                 href="#layanan" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('layanan')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-sans font-bold rounded-2xl shadow-xl shadow-orange-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
               >
                 Jelajahi Layanan
               </a>
               <a 
                 href="#contact" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="px-8 py-4 bg-navy hover:bg-[#1B365D] text-white font-sans font-bold rounded-2xl active:scale-[0.98] transition-all duration-300"
               >
                 Hubungi Kami

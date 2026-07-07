@@ -124,12 +124,20 @@ function HeroSection() {
             <div className="pt-4 flex flex-wrap gap-4">
               <a 
                 href="#products" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-sans font-bold rounded-2xl shadow-xl shadow-red-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
               >
                 Lihat Layanan
               </a>
               <a 
                 href="#portfolio" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="px-8 py-4 bg-navy hover:bg-[#1B365D] text-white font-sans font-bold rounded-2xl active:scale-[0.98] transition-all duration-300"
               >
                 Portofolio Kami
